@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+}
 provider "aws" {
     region  ="eu-west-2"
     profile = "default"
@@ -15,4 +23,3 @@ resource "aws_instance" "terraformdocec2" {
     Name = "Terraform_jenkins"
   }
 }
-
